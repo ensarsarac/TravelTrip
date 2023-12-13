@@ -1,0 +1,44 @@
+﻿
+@model TravelTripProje.Models.Classes.BlogGuncelleViewModel
+
+
+@{
+    ViewBag.Title = "Guncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{ 
+    DateTime tarih = Model.Tarih;
+}
+
+<h2>Blog Güncelle</h2>
+<hr />
+@using (Html.BeginForm("Guncelle", "Admin", FormMethod.Post))
+{
+
+    <div class="form-group">
+        <label class="form-label">Başlık</label>
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x=>x.Baslik,"",new {@class="text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Açıklama</label>
+        @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control", rows = 10 })
+        @Html.ValidationMessageFor(x => x.Aciklama, "", new { @class = "text-danger" })
+
+    </div>
+
+
+    <div class="form-group">
+        <label class="form-label">Tarih</label>
+        @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control", type = "date" })
+        @Html.ValidationMessageFor(x => x.Tarih, "", new { @class = "text-danger" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+
+}
+
+<script>
+    document.getElementById("Tarih").valueAsDate = tarih;
+</script>

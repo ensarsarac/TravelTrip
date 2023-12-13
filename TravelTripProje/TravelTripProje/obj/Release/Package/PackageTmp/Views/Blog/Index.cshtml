@@ -1,0 +1,85 @@
+﻿
+@model TravelTripProje.Models.BlogVeYorum
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<head>
+    <title>Personal Blog a Blogging Category Flat Bootstarp  Responsive Website Template | Single :: w3layouts</title>
+    <link href="~/web2/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/web2/css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Personal Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!----webfonts---->
+    <link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+    <!----//webfonts---->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--end slider -->
+    <!--script-->
+    <script type="~/web2/text/javascript" src="js/move-top.js"></script>
+    <script type="~/web2/text/javascript" src="js/easing.js"></script>
+    <!--/script-->
+    <script type="~/web2/text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			});
+    </script>
+    <!---->
+
+</head>
+
+
+    <div class="single">
+        <div class="container">
+            <div class="col-md-8 single-main">
+                @foreach (var item in Model.bloglar)
+                {
+                <div class="single-grid">
+                    <img style="margin-bottom:15px;" src="~/web2/images/@item.Gorsel" alt="" />
+                    <br />
+                    <h3><a href="/Blog/BlogDetay/@item.ID"> @item.Baslik </a></h3>
+                    
+                    <p>
+                       @item.Aciklama
+                    </p>
+                </div>
+                
+                <div class="w-100" style="height:2px; background-color:red; opacity:0.4"></div>
+                <br /><br />
+                }
+                
+                
+                
+                
+            </div>
+
+            <div class="col-md-4 side-content">
+                <div class="recent">
+                    <h3>Son Bloglar</h3>
+                    <ul>
+                        @foreach (var item in Model.son4blog)
+                        {
+                            <li><a href="#">@item.Baslik</a></li>
+
+                        }
+
+                    </ul>
+                </div>
+
+                @Html.Partial("~/Views/Blog/SonYorumlar.cshtml")
+
+            </div>
+           
+        </div>
+    </div>
+
+

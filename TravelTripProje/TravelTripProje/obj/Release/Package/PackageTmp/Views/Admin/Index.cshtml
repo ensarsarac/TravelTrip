@@ -1,0 +1,47 @@
+﻿
+@model List<TravelTripProje.Models.Classes.Blog>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<form method="get">
+
+    <div class="form-group">
+        <input type="search" class="form-control mb-3" name="sehir" placeholder="aradığınız şehir..." /><br />
+        <button type="submit" class="btn btn-info btn-lg">Ara</button>
+    </div>
+
+</form>
+
+
+<h2>Tüm Bloglar Listesi</h2>
+<br />
+
+<table class="table table-bordered ">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Tarih</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Baslik</td>
+            <td>@item.Tarih.ToString("dd-MM-yyyy")</td>
+            <td><a href="/Admin/Sil/@item.ID/" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Admin/Guncelle/@item.ID/" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Blog/BlogDetay/@item.ID/" class="btn btn-default">Detaylar</a></td>
+        </tr>
+    }
+
+
+</table>
+
+<a href="/Admin/BlogEkle/" class="btn btn-primary">Yeni Blog Ekle</a>

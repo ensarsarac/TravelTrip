@@ -1,0 +1,19 @@
+﻿@model TravelTripProje.Models.Classes.Hakkimizda
+
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+    
+    
+    <div class="content">
+        <div class="wrap">
+            <div class="about p-3">
+                <h3>About</h3>
+                <img src="~/web/@Model.Gorsel" alt="" />
+                @Model.Icerik
+            </div>
+        </div>
+    </div>
+<br />

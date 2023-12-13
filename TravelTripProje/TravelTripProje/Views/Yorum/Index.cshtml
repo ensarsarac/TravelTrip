@@ -1,0 +1,50 @@
+﻿
+@model List<TravelTripProje.Models.Classes.Yorumlar>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+
+<form method="get">
+
+    <div class="form-group">
+        <input type="search" class="form-control mb-3" name="yorum" placeholder="aradığınız yorum..." /><br />
+        <button type="submit" class="btn btn-info btn-lg">Ara</button>
+    </div>
+
+</form>
+
+<br />
+<h2>Yorum Listesi</h2>
+<br />
+
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>#</th>
+        <th>Kullanıcı Adı</th>
+        <th>Mail</th>
+        <th>Yorum</th>
+        <th>Blog</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.KullaniciAdi</td>
+            <td>@item.Mail</td>
+            <td>@item.Yorum</td>
+            <td>@item.Blog.Baslik</td>
+            <td><a href="/Yorum/Sil/@item.ID/" id="silbtn" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Yorum/Guncelle/@item.ID/" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+    }
+
+
+</table>

@@ -1,0 +1,45 @@
+﻿
+@model TravelTripProje.Models.Classes.Iletisim
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+    <div class="contact">
+        <div class="wrap">
+            <div class="contact-top">
+                <h3>İletişim Bilgileri</h3>
+                <p> Bize ulaşmak için direk kısayoldan bizlere mesajlarınızı iletebilirsiniz. Veya bize yakınsanız bizimle yüz yüze görüşmek istersiniz aşağıda bulunan adresten ofisimize gelebilirsiniz. Başka bir seçenek de telefon numaramız üzerinden bizi arayabilir iletişime geçebilirsiniz.</p>
+            </div>
+            <div class="form" >
+                <form class="cmxform" id="contactForm" method="post" action="/Iletisim/Index/">
+                    <div>
+                        <input type="text" class="textbox" name="AdSoyad" value="Ad Soyad" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Adınız soyadınız';}">
+                    </div>
+                    <div>
+                        <input type="text" class="textbox" value="Mail" name="Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mail';}">
+                    </div>
+                    <div>
+                        <input type="text" class="textbox" value="konu"name="Konu" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Konu';}">
+                    </div>
+                    <div class="form1">
+                        <div>
+                            <textarea value="Mesaj" onfocus="this.value = '';" name="Mesaj" onblur="if (this.value == '') {this.value = 'Mesaj';}">Mesaj:</textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" class="read">Gönder</button>
+                    </div>
+                    
+                </form>
+            </div>
+            
+            <div class="clear"></div>
+            
+            @Html.Action("IletisimDiger", "Iletisim")
+
+            <div class="clear"></div>
+        </div>
+    </div>
