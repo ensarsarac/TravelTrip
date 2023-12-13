@@ -32,6 +32,11 @@
   <li>Esnek veritabanı yapısı.</li>
 </ul>
 
+![Ekran görüntüsü 2023-12-13 220222](https://github.com/ensarsarac/TravelTrip/assets/76907308/c99f4822-d684-428f-9d84-e7bad490ec7e)
+![Ekran görüntüsü 2023-12-13 220146](https://github.com/ensarsarac/TravelTrip/assets/76907308/4b6744d8-cc98-4b44-a03b-3f57e9de9829)
+![Ekran görüntüsü 2023-12-13 220446](https://github.com/ensarsarac/TravelTrip/assets/76907308/8e7339e2-bd0c-493a-996b-3ebc283fda12)
+![Ekran görüntüsü 2023-12-13 220302](https://github.com/ensarsarac/TravelTrip/assets/76907308/41a277cd-cb08-4529-beba-e526b977a9f2)
+![Ekran görüntüsü 2023-12-13 220236](https://github.com/ensarsarac/TravelTrip/assets/76907308/1bf1bbd3-897b-41f2-91d2-6f6bf25fd755)
 
 
 
