@@ -2,6 +2,6 @@
 * text=auto
 *.html linguist-detectable=false
 *.cshtml linguist-detectable=false
-*.csharp linguist-detectable=true
+*.csharp linguist-detectable=false
 *.js linguist-detectable=false
 *.css linguist-detectable=false
